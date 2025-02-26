@@ -1,12 +1,5 @@
-import ChatHomeForm from "@/components/chat/chat-home";
-import React from "react";
+import { redirect } from "next/navigation";
 
-const ChatPage = () => {
-  return (
-    <div>
-      <ChatHomeForm />
-    </div>
-  );
-};
-
-export default ChatPage;
+export default function RootPage() {
+  redirect("/c");
+}
