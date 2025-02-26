@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --custom-gray: #1d1d1f;
+    --custom-gray-1: #2c2c2c;
+    --custom-gray-2: #666;
+    --custom-gray-3: #d2d9e8;
+    --custom-gray-4: #f8f9fb;
+    --custom-gray-6: #fff;
+
+    --gray-50: rgb(56, 85, 113);
+    /* Thêm màu gray-50 */
+    --gray-170: #1d1d1f;
+    --gray-171: #0a0a0a;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .system {
+    --color-primary: #0f0f0f;
+
+    --custom-gray: #1d1d1f;
+    --custom-gray-1: #2c2c2c;
+    --custom-gray-2: #666;
+    --custom-gray-3: #d2d9e8;
+    --custom-gray-4: #f8f9fb;
+    --custom-gray-6: #fff;
+    --custom-gray-7: #f8f9fb;
+
+    --gray-170: #1d1d1f;
+    /* Giá trị màu khi chọn "System" */
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+    10% {
+      transform: translate(-50%, -1px) rotate(-5deg);
+    }
+    20% {
+      transform: translate(-50%, -2px) rotate(5deg);
+    }
+    30% {
+      transform: translate(-50%, 1px) rotate(0deg);
+    }
+    40% {
+      transform: translate(-50%, 2px) rotate(-5deg);
+    }
+    50% {
+      transform: translate(-50%, -1px) rotate(5deg);
+    }
+    60% {
+      transform: translate(-50%, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(-50%, -2px) rotate(-5deg);
+    }
+    80% {
+      transform: translate(-50%, 2px) rotate(5deg);
+    }
+    90% {
+      transform: translate(-50%, -1px) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, 0) rotate(0deg);
+    }
+  }
+
+  .animate-shake {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+
+  @keyframes shake2 {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  .shake-animation {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shake2 {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-shake2 {
+    animation: shake2 0.5s infinite;
+  }
+
+  .animate-shake2:hover {
+    animation: none;
+  }
+
+  /* .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  } */
+
+  /* .wrapper {
+    width: 450px;
+    height: 50px;
+    position: relative;
+    margin: auto;
+    background: #ccc;
+    overflow: hidden;
+  }
+
+  .wrapper::after {
+    width: 448px;
+    height: 48px;
+    content: "";
+    position: absolute;
+    border: solid 1px white;
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    color: black;
+  }
+
+  .boxes {
+    position: relative;
+    left: -50px;
+  }
+
+  .nav {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0;
+  } */
+
+  .nav {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .wrapper {
+    width: 450px; /* Kích thước vùng hiển thị */
+    height: 50px;
+    margin: auto;
+    background: #ccc;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+  }
+
+  .boxes {
+    display: flex;
+    gap: 10px; /* Tạo khoảng cách giữa các box */
+    width: max-content; /* Để phần tử con không bị co lại */
+  }
+
+  .box {
+    width: 50px;
+    height: 50px;
+    background: red;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+  }
+}
+
+.chat-button-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.message {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    .bot-message {
+      background-color: #faecdc;
+      padding: 10px;
+      border-radius: 8px;
+      word-wrap: break-word;
+    }
+
+    .user-message {
+      background-color: #e0f7fa;
+      padding: 10px;
+      border-radius: 8px;
+      word-wrap: break-word;
+    }
+  }
+
+  /* .landing-page-bg {
+    background: radial-gradient(at top right, #c0d4ec, transparent 80%),
+      radial-gradient(at top left, #c1f0e5, transparent 50%),
+      radial-gradient(at bottom right, #83b6e2, transparent 70%),
+      radial-gradient(at bottom left, #66e4dd, transparent 100%);
+    background-size: 100vw 100%;
+  } */
+}
